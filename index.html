@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>The Psychic Game</title>
 </head>
+
 <body>
   <h1>The Psychic Game</h1>
 
@@ -17,40 +19,40 @@
 
   <script>
     // computer choices
-    const letterBase = ["a","b","c"];
-    let currentLetter = letterBase[Math.floor(Math.random()* letterBase.length)]
-    var wins    = 0;
-    var triesLeft  = 15;
+    const letterBase = ["a", "b", "c"];
+    let currentLetter = letterBase[Math.floor(Math.random() * letterBase.length)]
+    var wins = 0;
+    var triesLeft = 15;
     // variables for wins, 
     // variable for losses
     // variable for ties
 
-    var $wins       = document.getElementById("wins");
-    var $triesLeft     = document.getElementById("triesLeft");
-    var $losses       = document.getElementById("losses");
-    var $cpChoice   = document.getElementById("cpChoice");
+    var $wins = document.getElementById("wins");
+    var $triesLeft = document.getElementById("triesLeft");
+    var $losses = document.getElementById("losses");
+    var $cpChoice = document.getElementById("cpChoice");
     var $userChoice = document.getElementById("userChoice");
     // Create variable for each html element to update their text
 
 
     // on key up, 
-    document.onkeyup = function(event) {
+      document.onkeyup = function (event) {
         let userChoice = event.key;
-        if(userChoice === currentLetter){
-        wins = wins +1;
-        $wins.textContent = wins;
-    }
-    else{
-        triesLeft = triesLeft -1;
-        $triesLeft.textContent = triesLeft;
-    if(triesLeft === 0){
-        losses = losses +1;
-        $losses.textContent = losses;
-    }
-    }
-}
-      
+        if (userChoice === currentLetter) {
+          wins = wins + 1;
+          $wins.textContent = wins;
+        }
+        else {
+          triesLeft = triesLeft - 1;
+          $triesLeft.textContent = triesLeft;
+          if (triesLeft === 0) {
+            losses = losses + 1;
+            $losses.textContent = losses;
+          }
+        }
+      }
+
     </script>
   </body>
-  </html>
-  
+
+</html>
