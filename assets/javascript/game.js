@@ -40,7 +40,7 @@ document.onkeyup = function (event) {
         if (triesLeft === 0) {
             losses = losses + 1;
             triesLeft = 15
-            alert('suckaaa')
+            alert('Muwahaha YOU LOST!!!!')
             $triesLeft.textContent = triesLeft;
             $losses.textContent = losses;
         }
